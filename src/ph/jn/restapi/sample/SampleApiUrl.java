@@ -1,13 +1,13 @@
 /**
  * 
  */
-package ph.jn.restapi.app;
+package ph.jn.restapi.sample;
 
 /**
  * @author JN
  *
  */
-public interface ApiUrl {
+public interface SampleApiUrl {
 	
 	/**
 	 * Sample API Url

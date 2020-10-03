@@ -1,7 +1,7 @@
 /**
  * 
  */
-package ph.jn.restapi.app.data.io;
+package ph.jn.restapi.sample.data.io;
 
 import ph.jn.restapi.endpoint.io.ApiRequestResultImpl;
 

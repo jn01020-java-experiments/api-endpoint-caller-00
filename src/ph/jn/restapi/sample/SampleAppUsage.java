@@ -1,7 +1,7 @@
 /**
  * 
  */
-package ph.jn.restapi.app;
+package ph.jn.restapi.sample;
 
 /**
  * @author JN
@@ -15,6 +15,7 @@ public class SampleAppUsage {
 	}
 
 	public void execute() {
+		// Sample endpoint invocations
 		g0.POST_0.post();
 		g0.POST_1.post(null);
 		g0.GET_0.get();
