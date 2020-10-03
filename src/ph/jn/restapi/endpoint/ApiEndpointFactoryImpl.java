@@ -1,15 +1,15 @@
 /**
  * 
  */
-package ph.jn.restapi.msgchannel;
+package ph.jn.restapi.endpoint;
 
-import ph.jn.restapi.msgchannel.io.IApiRequestResult;
+import ph.jn.restapi.endpoint.io.IApiRequestResult;
 
 /**
  * @author JN
  *
  */
-public class ApiRequestFactoryImpl implements ApiRequestFactory {
+public class ApiEndpointFactoryImpl implements ApiEndpointFactory {
 	private Object jsonSerializer;
 
 	@Override
@@ -35,7 +35,7 @@ public class ApiRequestFactoryImpl implements ApiRequestFactory {
 	}
 }
 
-class PostRequest<O extends IApiRequestResult> extends BasicApiRequest<O> implements IPostEndpoint<O> {
+class PostRequest<O extends IApiRequestResult> extends BasicApiEndpoint<O> implements IPostEndpoint<O> {
 	PostRequest(Object jsonSerializer, String URL, Class<O> outputType) {
 		super(jsonSerializer, URL, outputType);
 	}
@@ -47,7 +47,7 @@ class PostRequest<O extends IApiRequestResult> extends BasicApiRequest<O> implem
 	}
 }
 
-class PostDataRequest<I, O extends IApiRequestResult> extends BasicApiRequest<O> implements IPostDataEndpoint<I, O> {
+class PostDataRequest<I, O extends IApiRequestResult> extends BasicApiEndpoint<O> implements IPostDataEndpoint<I, O> {
 	public PostDataRequest(Object jsonSerializer, String URL, Class<I> inputType, Class<O> outputType) {
 		super(jsonSerializer, URL, outputType);
 	}
@@ -59,7 +59,7 @@ class PostDataRequest<I, O extends IApiRequestResult> extends BasicApiRequest<O>
 	}
 }
 
-class GetRequest<O extends IApiRequestResult> extends BasicApiRequest<O> implements IGetEndpoint<O> {
+class GetRequest<O extends IApiRequestResult> extends BasicApiEndpoint<O> implements IGetEndpoint<O> {
 	GetRequest(Object jsonSerializer, String URL, Class<O> outputType) {
 		super(jsonSerializer, URL, outputType);
 	}
@@ -71,7 +71,7 @@ class GetRequest<O extends IApiRequestResult> extends BasicApiRequest<O> impleme
 	}
 }
 
-class GetWithFilterRequest<I, O extends IApiRequestResult> extends BasicApiRequest<O> implements IGetWithFilterEndpoint<I, O> {
+class GetWithFilterRequest<I, O extends IApiRequestResult> extends BasicApiEndpoint<O> implements IGetWithFilterEndpoint<I, O> {
 	public GetWithFilterRequest(Object jsonSerializer, String URL, Class<I> inputType, Class<O> outputType) {
 		super(jsonSerializer, URL, outputType);
 	}

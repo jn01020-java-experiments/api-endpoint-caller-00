@@ -1,13 +1,13 @@
-package ph.jn.restapi.msgchannel;
+package ph.jn.restapi.endpoint;
 
-import ph.jn.restapi.msgchannel.io.IApiRequestResult;
+import ph.jn.restapi.endpoint.io.IApiRequestResult;
 
-public class BasicApiRequest<O extends IApiRequestResult> {
+public class BasicApiEndpoint<O extends IApiRequestResult> {
 	private final String URL;
 	private final Class<O> outputType;
 	private Object jsonSerializer;
 
-	public BasicApiRequest(Object jsonSerializer, String URL, Class<O> outputType) {
+	public BasicApiEndpoint(Object jsonSerializer, String URL, Class<O> outputType) {
 		this.URL = URL;
 		this.outputType = outputType;
 		this.jsonSerializer = jsonSerializer;

@@ -3,7 +3,7 @@
  */
 package ph.jn.restapi.app.data.io;
 
-import ph.jn.restapi.msgchannel.io.ApiRequestResultImpl;
+import ph.jn.restapi.endpoint.io.ApiRequestResultImpl;
 
 /**
  * @author JN

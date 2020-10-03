@@ -4,11 +4,11 @@
 package ph.jn.restapi.app;
 
 import ph.jn.restapi.app.data.io.SampleApiResult;
-import ph.jn.restapi.msgchannel.ApiRequestFactory;
-import ph.jn.restapi.msgchannel.IGetEndpoint;
-import ph.jn.restapi.msgchannel.IGetWithFilterEndpoint;
-import ph.jn.restapi.msgchannel.IPostDataEndpoint;
-import ph.jn.restapi.msgchannel.IPostEndpoint;
+import ph.jn.restapi.endpoint.ApiEndpointFactory;
+import ph.jn.restapi.endpoint.IGetEndpoint;
+import ph.jn.restapi.endpoint.IGetWithFilterEndpoint;
+import ph.jn.restapi.endpoint.IPostDataEndpoint;
+import ph.jn.restapi.endpoint.IPostEndpoint;
 
 /**
  * A sample endpoint group
@@ -22,7 +22,7 @@ public class SampleEndpointGroup {
 	public final IGetEndpoint<SampleApiResult> GET_0;
 	public final IGetWithFilterEndpoint<Object, SampleApiResult> GET_1;
 
-	public SampleEndpointGroup(ApiRequestFactory apiFactory) {
+	public SampleEndpointGroup(ApiEndpointFactory apiFactory) {
 		// SAMPLE INITIALIZATION
 
 		this.POST_0 = apiFactory.definePostEndpoint(ApiUrl.SAMPLE_API_URL, SampleApiResult.class);

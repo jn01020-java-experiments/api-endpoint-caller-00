@@ -1,6 +1,6 @@
-package ph.jn.restapi.msgchannel;
+package ph.jn.restapi.endpoint;
 
-import ph.jn.restapi.msgchannel.io.IApiRequestResult;
+import ph.jn.restapi.endpoint.io.IApiRequestResult;
 
 public interface IGetEndpoint<O extends IApiRequestResult> {
 

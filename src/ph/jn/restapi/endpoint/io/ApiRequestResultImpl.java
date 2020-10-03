@@ -1,7 +1,7 @@
 /**
  * 
  */
-package ph.jn.restapi.msgchannel.io;
+package ph.jn.restapi.endpoint.io;
 
 /**
  * @author JN
